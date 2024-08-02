@@ -1,0 +1,28 @@
+.homepage-layout{
+  display: flex;
+  width: 100%;
+}
+.homepage-left{
+  width: 20%;
+}
+.homepage-right{
+  width: 73%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 8px;
+}
+.note-icon{
+  cursor: pointer;
+}
+@media(max-width:576px){
+  .homepage-layout{
+    flex-direction: column;
+  }
+  .homepage-right{
+    width: 93%;
+  }
+  .homepage-left{
+    width: 100%;
+  }
+}
