@@ -107,7 +107,7 @@ const NoteComponent = () => {
                 Cancel
               </button>
               <button onClick={handleAddNote} className="note-add-button">
-                Add Note
+                Add
               </button>
             </div>
           </div>
