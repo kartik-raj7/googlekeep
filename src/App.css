@@ -26,3 +26,17 @@
     width: 100%;
   }
 }
+.note-image-preview-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  max-height: 100%; 
+  overflow: hidden;
+}
+
+.note-image-preview {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}

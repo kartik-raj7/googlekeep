@@ -8,13 +8,13 @@ import { handleDeleteNote, handleUpdateNote } from "../../utils/utils";
 const AllNotes = () => {
   const notes = useSelector((state: RootState) => state.notes.notes);
   const hasPinnedNotes = notes.some(note => note.isPinned);
+  const hasNotes = notes.some(note=>!note.isArchived&&!note.isPinned);
   const hasNonPinnedNotes = notes.some(note => !note.isPinned);
-  const hasNonArchivedNotes = notes.some(note => !note.isArchived);
   const dispatch = useDispatch();  return (
     <div className="notes-container">
       <PinnedNotes/>
       {hasPinnedNotes&&hasNonPinnedNotes?<div className="others-heading">Others</div>:null}
-      {hasNonPinnedNotes && hasNonArchivedNotes? (
+      {hasPinnedNotes||hasNotes? (
         <div className="notes-grid">
           {notes.map((note) => (
             !note.isPinned&&!note.isArchived?

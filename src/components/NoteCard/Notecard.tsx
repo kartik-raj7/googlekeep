@@ -17,6 +17,7 @@ const NoteCard: React.FC<NoteCardProps> = ({ note, onDelete, onUpdate,deletedNot
     <div className="note-card" style={{backgroundColor:note.color}}>
       <h2>{note.title}</h2>
       <p>{note.content}</p>
+      {note.imageUrl && <img src={note.imageUrl} alt="Selected" className="note-image-preview" />}
       {!deletedNotes&&<div className='note-card-options'>
       <div onClick={() => onDelete(note.uid)} style={{color:'red'}}  className='note-icon'><BiTrash/></div>
       <div
